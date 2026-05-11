@@ -1,1 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Personal Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Public site wrapper -->
+  <div id="site">
+    <header class="hero">
+      <div class="hero-content">
+        <h1 id="site-title">Your Name</h1>
+        <p id="site-tagline">Short tagline about who you are.</p>
+        <a id="site-cta-text" href="#about" class="btn-primary">Learn more</a>
+      </div>
+    </header>
 
+    <nav class="top-nav">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <button id="open-admin-btn" class="admin-link" title="Admin">Admin</button>
+    </nav>
+
+    <main>
+      <section id="about" class="card">
+        <h2>About me</h2>
+        <p id="about-text">
+          This is where you write about yourself, what you do, and what you care about.
+        </p>
+      </section>
+
+      <section id="projects" class="card">
+        <h2>Things I’m into</h2>
+        <ul id="projects-list">
+          <li>Example project or interest 1</li>
+          <li>Example project or interest 2</li>
+          <li>Example project or interest 3</li>
+        </ul>
+      </section>
+
+      <section id="contact" class="card">
+        <h2>Contact</h2>
+        <p id="contact-text">
+          You can reach me at <span id="contact-email">me@example.com</span>.
+        </p>
+        <div class="socials">
+          <a id="social-link-1" href="#" target="_blank">Main link</a>
+          <a id="social-link-2" href="#" target="_blank">Second link</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span id="footer-text">© 2026 Your Name. All rights reserved.</span>
+    </footer>
+  </div>
+
+  <!-- Admin login modal -->
+  <div id="login-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Admin login</h2>
+      <label>
+        Password
+        <input id="admin-password" type="password" placeholder="0000">
+      </label>
+      <div class="modal-actions">
+        <button id="login-btn" class="btn-primary">Log in</button>
+        <button id="close-login-btn" class="btn-secondary">Cancel</button>
+      </div>
+      <p id="login-error" class="error-text"></p>
+    </div>
+  </div>
+
+  <!-- Admin panel -->
+  <div id="admin-panel" class="admin-panel hidden">
+    <div class="admin-header">
+      <h2>Site editor</h2>
+      <button id="close-admin-btn" class="btn-secondary">Close</button>
+    </div>
+
+    <div class="admin-grid">
+      <div class="admin-card">
+        <h3>Basics</h3>
+        <label>
+          Site title
+          <input id="edit-title" type="text">
+        </label>
+        <label>
+          Tagline
+          <input id="edit-tagline" type="text">
+        </label>
+        <label>
+          Call-to-action text
+          <input id="edit-cta-text" type="text">
+        </label>
+      </div>
+
+      <div class="admin-card">
+        <h3>About</h3>
+        <label>
+          About text
+          <textarea id="edit-about" rows="4"></textarea>
+        </label>
+      </div>
+
+      <div class="admin-card">
+        <h3>Projects / interests</h3>
+        <label>
+          One item per line
+          <textarea id="edit-projects" rows="4"></textarea>
+        </label>
+      </div>
+
+      <div class="admin-card">
+        <h3>Contact</h3>
+        <label>
+          Email
+          <input id="edit-email" type="email">
+        </label>
+        <label>
+          Main link URL
+          <input id="edit-social-1-url" type="url">
+        </label>
+        <label>
+          Main link label
+          <input id="edit-social-1-label" type="text">
+        </label>
+        <label>
+          Second link URL
+          <input id="edit-social-2-url" type="url">
+        </label>
+        <label>
+          Second link label
+          <input id="edit-social-2-label" type="text">
+        </label>
+      </div>
+
+      <div class="admin-card">
+        <h3>Theme</h3>
+        <label>
+          Accent color
+          <input id="edit-accent" type="color" value="#4f46e5">
+        </label>
+        <label>
+          Background color
+          <input id="edit-bg" type="color" value="#050816">
+        </label>
+        <label>
+          Card color
+          <input id="edit-card-bg" type="color" value="#0b1020">
+        </label>
+      </div>
+
+      <div class="admin-card">
+        <h3>Footer</h3>
+        <label>
+          Footer text
+          <input id="edit-footer" type="text">
+        </label>
+      </div>
+    </div>
+
+    <div class="admin-footer">
+      <button id="save-btn" class="btn-primary">Save changes</button>
+      <button id="reset-btn" class="btn-danger">Reset to defaults</button>
+      <span id="save-status" class="status-text"></span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
