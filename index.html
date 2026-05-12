@@ -2,174 +2,163 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Personal Site</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name's Web Zone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Public site wrapper -->
-  <div id="site">
-    <header class="hero">
-      <div class="hero-content">
-        <h1 id="site-title">Your Name</h1>
-        <p id="site-tagline">Short tagline about who you are.</p>
-        <a id="site-cta-text" href="#about" class="btn-primary">Learn more</a>
+
+  <!-- Tiled background image -->
+  <div class="page-bg"></div>
+
+  <div class="page-wrap">
+
+    <!-- Big 2000s header -->
+    <header class="site-header">
+      <div class="header-image">
+        <!-- replace with your own header.jpg -->
+        <img src="header-banner.jpg" alt="Header banner">
+      </div>
+      <div class="header-title">
+        <h1>WELCOME TO <span class="highlight">YOUR NAME</span>'S SITE</h1>
+        <p class="tagline">est. 2000‑something • personal web zone • 100% hand‑coded</p>
       </div>
     </header>
 
-    <nav class="top-nav">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-      <button id="open-admin-btn" class="admin-link" title="Admin">Admin</button>
-    </nav>
-
-    <main>
-      <section id="about" class="card">
-        <h2>About me</h2>
-        <p id="about-text">
-          This is where you write about yourself, what you do, and what you care about.
-        </p>
-      </section>
-
-      <section id="projects" class="card">
-        <h2>Things I’m into</h2>
-        <ul id="projects-list">
-          <li>Example project or interest 1</li>
-          <li>Example project or interest 2</li>
-          <li>Example project or interest 3</li>
-        </ul>
-      </section>
-
-      <section id="contact" class="card">
-        <h2>Contact</h2>
-        <p id="contact-text">
-          You can reach me at <span id="contact-email">me@example.com</span>.
-        </p>
-        <div class="socials">
-          <a id="social-link-1" href="#" target="_blank">Main link</a>
-          <a id="social-link-2" href="#" target="_blank">Second link</a>
+    <!-- Layout: left sidebar / main / right sidebar -->
+    <div class="layout">
+      <!-- LEFT SIDEBAR -->
+      <aside class="sidebar left">
+        <div class="panel">
+          <h2>Navigation</h2>
+          <ul>
+            <li><a href="#about">About me</a></li>
+            <li><a href="#stuff">Cool stuff</a></li>
+            <li><a href="#projects">My projects</a></li>
+            <li><a href="#guestbook">Guestbook</a></li>
+          </ul>
         </div>
-      </section>
-    </main>
 
-    <footer class="footer">
-      <span id="footer-text">© 2026 Your Name. All rights reserved.</span>
+        <div class="panel">
+          <h2>Status</h2>
+          <p><strong>Mood:</strong> chill</p>
+          <p><strong>Listening to:</strong> some random playlist</p>
+          <p><strong>Playing:</strong> whatever game you like</p>
+        </div>
+
+        <div class="panel">
+          <h2>Buttons</h2>
+          <div class="buttons-grid">
+            <!-- Make tiny 88x31 style buttons and swap these -->
+            <img src="button-github.png" alt="GitHub button">
+            <img src="button-neocities.png" alt="Neocities button">
+            <img src="button-completeapps.png" alt="Complete Apps button">
+          </div>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main">
+        <section id="about" class="content-box">
+          <h2>About me</h2>
+          <p>
+            Hey, I'm <strong>Your Name</strong>. I'm a student who spends way too much time 
+            building small web apps – planners, wishlists, trackers – and making them feel 
+            like old‑school websites mixed with modern stuff.
+          </p>
+          <p>
+            I like dark themes, glitchy graphics, and sites that feel like someone’s 
+            personal space instead of a boring template.
+          </p>
+          <div class="about-images">
+            <!-- Swap these with your own images -->
+            <img src="me-photo-1.jpg" alt="Me 1">
+            <img src="me-photo-2.jpg" alt="Me 2">
+          </div>
+        </section>
+
+        <section id="stuff" class="content-box">
+          <h2>Cool stuff on this site</h2>
+          <ul class="list-star">
+            <li>Random notes and updates</li>
+            <li>Links to my projects (planners, wishlists, trackers)</li>
+            <li>Old‑school web graphics and buttons</li>
+            <li>A guestbook you can pretend to sign</li>
+          </ul>
+        </section>
+
+        <section id="projects" class="content-box">
+          <h2>My projects</h2>
+          <div class="projects-list">
+            <div class="project-item">
+              <h3>Complete Planner</h3>
+              <p>A browser planner with aggressive overdue styling and mobile layout.</p>
+              <a href="https://completeapps.github.io/planner/" target="_blank">Visit planner</a>
+            </div>
+            <div class="project-item">
+              <h3>Wishlist</h3>
+              <p>Dark wishlist with admin mode, tags, and Firebase so changes sync.</p>
+              <a href="https://completeapps.github.io/wishlist/" target="_blank">Visit wishlist</a>
+            </div>
+            <div class="project-item">
+              <h3>Track Tracker</h3>
+              <p>Track + long jump stats with charts and sync. (Coming soon.)</p>
+              <a href="#" class="disabled-link">Coming soon</a>
+            </div>
+          </div>
+        </section>
+
+        <section id="guestbook" class="content-box">
+          <h2>Guestbook</h2>
+          <p class="small">
+            This is fake for now, but maybe one day it will actually save things.
+          </p>
+          <form class="guestbook-form" onsubmit="alert('Thanks for signing! (Not actually saved yet)'); return false;">
+            <label>
+              Name:
+              <input type="text" required>
+            </label>
+            <label>
+              Message:
+              <textarea rows="3" required></textarea>
+            </label>
+            <button type="submit">Sign guestbook</button>
+          </form>
+        </section>
+      </main>
+
+      <!-- RIGHT SIDEBAR -->
+      <aside class="sidebar right">
+        <div class="panel">
+          <h2>Site info</h2>
+          <p><strong>Version:</strong> 1.0 (2000s style)</p>
+          <p><strong>Last updated:</strong> May 2026</p>
+          <p><strong>Best viewed in:</strong> whatever browser you like</p>
+        </div>
+
+        <div class="panel">
+          <h2>Mini gallery</h2>
+          <div class="mini-gallery">
+            <!-- swap with your own small thumbnails -->
+            <img src="thumb-1.jpg" alt="Thumbnail 1">
+            <img src="thumb-2.jpg" alt="Thumbnail 2">
+            <img src="thumb-3.jpg" alt="Thumbnail 3">
+            <img src="thumb-4.jpg" alt="Thumbnail 4">
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2>Hit counter</h2>
+          <p class="counter">000123</p>
+          <p class="small">totally real visits</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="site-footer">
+      <p>© Your Name • personal site • built by hand</p>
     </footer>
+
   </div>
-
-  <!-- Admin login modal -->
-  <div id="login-modal" class="modal hidden">
-    <div class="modal-content">
-      <h2>Admin login</h2>
-      <label>
-        Password
-        <input id="admin-password" type="password" placeholder="0000">
-      </label>
-      <div class="modal-actions">
-        <button id="login-btn" class="btn-primary">Log in</button>
-        <button id="close-login-btn" class="btn-secondary">Cancel</button>
-      </div>
-      <p id="login-error" class="error-text"></p>
-    </div>
-  </div>
-
-  <!-- Admin panel -->
-  <div id="admin-panel" class="admin-panel hidden">
-    <div class="admin-header">
-      <h2>Site editor</h2>
-      <button id="close-admin-btn" class="btn-secondary">Close</button>
-    </div>
-
-    <div class="admin-grid">
-      <div class="admin-card">
-        <h3>Basics</h3>
-        <label>
-          Site title
-          <input id="edit-title" type="text">
-        </label>
-        <label>
-          Tagline
-          <input id="edit-tagline" type="text">
-        </label>
-        <label>
-          Call-to-action text
-          <input id="edit-cta-text" type="text">
-        </label>
-      </div>
-
-      <div class="admin-card">
-        <h3>About</h3>
-        <label>
-          About text
-          <textarea id="edit-about" rows="4"></textarea>
-        </label>
-      </div>
-
-      <div class="admin-card">
-        <h3>Projects / interests</h3>
-        <label>
-          One item per line
-          <textarea id="edit-projects" rows="4"></textarea>
-        </label>
-      </div>
-
-      <div class="admin-card">
-        <h3>Contact</h3>
-        <label>
-          Email
-          <input id="edit-email" type="email">
-        </label>
-        <label>
-          Main link URL
-          <input id="edit-social-1-url" type="url">
-        </label>
-        <label>
-          Main link label
-          <input id="edit-social-1-label" type="text">
-        </label>
-        <label>
-          Second link URL
-          <input id="edit-social-2-url" type="url">
-        </label>
-        <label>
-          Second link label
-          <input id="edit-social-2-label" type="text">
-        </label>
-      </div>
-
-      <div class="admin-card">
-        <h3>Theme</h3>
-        <label>
-          Accent color
-          <input id="edit-accent" type="color" value="#4f46e5">
-        </label>
-        <label>
-          Background color
-          <input id="edit-bg" type="color" value="#050816">
-        </label>
-        <label>
-          Card color
-          <input id="edit-card-bg" type="color" value="#0b1020">
-        </label>
-      </div>
-
-      <div class="admin-card">
-        <h3>Footer</h3>
-        <label>
-          Footer text
-          <input id="edit-footer" type="text">
-        </label>
-      </div>
-    </div>
-
-    <div class="admin-footer">
-      <button id="save-btn" class="btn-primary">Save changes</button>
-      <button id="reset-btn" class="btn-danger">Reset to defaults</button>
-      <span id="save-status" class="status-text"></span>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
